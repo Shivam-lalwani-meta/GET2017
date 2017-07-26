@@ -14,6 +14,11 @@
  */
 
 package ProductList;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.util.Scanner;
 /*
  * Main class that takes number of orders, quantity and code of products from user.
@@ -25,6 +30,14 @@ public class ShoppingApp {
 	static int tempTotal=0,discountedPrice=0,totalDiscountedPrice=0,total=0;	//temporary total value and discounted price
 	static String Name=" ";	//name of Particular Product
 	public static void main(String[] args) throws Exception{
+		
+		BufferedWriter Writer = null;
+		try {
+			Writer = new BufferedWriter(new FileWriter("E:\\Bill.txt")); //Reader object to read file's data
+		} catch (FileNotFoundException e) {	//catch block to handle the eception, if the file not found or their is any problem in fetching the file
+			System.out.print("Error in fetching file");	//desired error to be displayed
+			e.printStackTrace();
+		}
 		/*object of reader class to read all files and display those on console one by one
 		 * and provide the details of code, price, type of discount etc.
 		*/
@@ -78,6 +91,24 @@ public class ShoppingApp {
 		System.out.print("SubTotal: INR "+total+"\n");
 		System.out.print("Discounted Applied: INR " +(total-totalDiscountedPrice)+"\n");
 		System.out.print("Total :  INR " +totalDiscountedPrice+"  "+"\n");
+		
+		Writer.write("\n\n"+"###################################################"+"\n");
+		Writer.newLine();
+		Writer.write("                 Your Order"+"\n");
+		Writer.newLine();
+		Writer.write("###################################################"+"\n"+"\n");
+		Writer.newLine();
+		Writer.write("PURCHASED PRODUCTS"+"\n");
+		Writer.newLine();
+		Writer.write("Product: "+Name +"\n");
+		Writer.newLine();
+		Writer.write("SubTotal: INR "+total+"\n");
+		Writer.newLine();
+		Writer.write("Discounted Applied: INR " +(total-totalDiscountedPrice)+"\n");
+		Writer.newLine();
+		Writer.write("Total :  INR " +totalDiscountedPrice+"  "+"\n");
+		Writer.newLine();
+		Writer.close();
 		sc.close();
 	}
 }
