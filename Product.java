@@ -5,7 +5,7 @@
  * Class Name: Product 
  * @description This class having the getters and setters for product values to provide abstraction.
  */
-package ProductList;
+
 public class Product {
 	
 	int productPrice; //product price

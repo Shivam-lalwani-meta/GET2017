@@ -7,12 +7,13 @@
  * storing the data of all three in individual arrays to perform searching the attributes of product.
  * This class is returning the desired values of product attributes to order class.
  */
-package ProductList;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Reader {
@@ -22,9 +23,8 @@ public class Reader {
 	String[] OrderPromo = null;
 	
 	//three arrays for storing each column of ProductList.csv file in individual arrays
-	public static String codeOfProduct[]=new String[100];
-	public static String nameOfProduct[]=new String[100];
-	public static String priceOfProduct[]=new String[100];
+	public HashMap<String, String> codeName = new HashMap<String,String>();
+	public HashMap<String, String> codePrice = new HashMap<String,String>();
 	
 	//three arrays for storing each column of ProductPromo.csv file in individual arrays
 	public static String thresholdPriceArray[]=new String[100];
@@ -37,7 +37,7 @@ public class Reader {
 	public static String order_applicableAmountArray[] = new String[100];
 	
 	//counters to count the valid number of enteries in each file
-	int productArrayCounter = 0;
+	//int productArrayCounter = 0;
 	int productPromoArrayCounter = 0;
 	int orderPromoArrayCounter = 0;
 	
@@ -70,15 +70,9 @@ public class Reader {
 				if(filepath=="E:\\ProductList.csv") {
 				
 					ProductList = lineData.split(",");
-					String code = ProductList[0];
-					codeOfProduct[productArrayCounter] = code;	//maintaining productCode Array
-					
-					String name = ProductList[1];
-					nameOfProduct[productArrayCounter]=name;	//maintaining productName Array
-					
-					String price = ProductList[2];
-					priceOfProduct[productArrayCounter]=price;	//maintaining productPrice Array
-					productArrayCounter++;
+					codeName.put(ProductList[0], ProductList[1]);
+					codePrice.put(ProductList[0], ProductList[2]);
+					//productArrayCounter++;
 				}
 				
 				if(filepath=="E:\\ProductPromo.csv") {
@@ -121,44 +115,16 @@ public class Reader {
 	}
 	/**
 	 * 
-	 * @param productCode
-	 * @param productQuantity
-	 * @return the product of price and quantity of product
-	 */
-	public int searchDetail(String productCode,int productQuantity) {
-		for(int k=0; k<codeOfProduct.length; k++) {
-			if(codeOfProduct[k].equals(productCode)) {
-				return Integer.parseInt(priceOfProduct[k])*productQuantity;
-			}
-		}
-	   return 0;
-	}
-	/**
-	 * 
-	 * @param productCode
-	 * @return the name of product
-	 */
-	public String searchName(String productCode) {
-		for(int k=0; k<codeOfProduct.length; k++) {
-			if(codeOfProduct[k].equals(productCode)) {
-				return nameOfProduct[k];
-			}
-		}
-	   return "Product not Found";
-	}
-	/**
-	 * 
-	 * @param priceWithoutDiscount, the subtotal amount without discount
+	 * @param priceWithoutDiscount, the sub-total amount without discount
 	 * @return the discounted price according to order price
 	 */
-	public int isApplicableOrderPromo(int priceWithoutDiscount) {
-		for(int k=orderPromoArrayCounter; k>=0; k--) {
-			if(priceWithoutDiscount >= Integer.parseInt((order_applicableAmountArray[k]))) {
+	public String isApplicableOrderPromo(String priceWithoutDiscount) {
+		for(int k=2; k>=0; k--) {
+			if(Integer.parseInt(priceWithoutDiscount) >= Integer.parseInt((order_applicableAmountArray[k]))) {
 				if((order_typeOfPromoArray[k]).equalsIgnoreCase("OrderFixedAmountPromotion"))
-				return (priceWithoutDiscount-Integer.parseInt(orderAmountToBePromotedArray[k]));
+				return Integer.toString(Integer.parseInt(priceWithoutDiscount)-Integer.parseInt(orderAmountToBePromotedArray[k]));
 				if((order_typeOfPromoArray[k]).equalsIgnoreCase("OrderFixedPercentPromotion"));
-				System.out.println(priceWithoutDiscount-((priceWithoutDiscount*Integer.parseInt(orderAmountToBePromotedArray[k]))/100));
-				return (priceWithoutDiscount-((priceWithoutDiscount*Integer.parseInt(orderAmountToBePromotedArray[k]))/100));
+				return Integer.toString(Integer.parseInt(priceWithoutDiscount)-((Integer.parseInt(priceWithoutDiscount)*Integer.parseInt(orderAmountToBePromotedArray[k]))/100));
 			}
 		}
 		return priceWithoutDiscount;
@@ -169,23 +135,16 @@ public class Reader {
 	 * @param productCode
 	 * @return the discounted price according to product promo file
 	 */
-	public int isApplicableProductPromo(int tempTotalWithoutDiscount, String productCode) {
-		for(int k=productPromoArrayCounter; k>=0; k--) {
+	public String isApplicableProductPromo(String tempTotal, String productCode, int quantity) {
+		for(int k=2; k>=0; k--) {
 			if((thresholdPriceArray[k]).contains(productCode)) {
 				if((typeOfPromoArray[k]).equalsIgnoreCase("ProductFixedAmountPromotion"))
-				return (tempTotalWithoutDiscount-Integer.parseInt(amountToBePromotedArray[k]));
+				return Integer.toString(Integer.parseInt(tempTotal)-(quantity*Integer.parseInt(amountToBePromotedArray[k])));
 				if((typeOfPromoArray[k]).equalsIgnoreCase("ProductFixedPercentPromotion"));
-				return (tempTotalWithoutDiscount-(((tempTotalWithoutDiscount*Integer.parseInt(amountToBePromotedArray[k]))/100)));
+				return Integer.toString(Integer.parseInt(tempTotal)-((Integer.parseInt(tempTotal)*Integer.parseInt(amountToBePromotedArray[k])/100)));
 			}
 		}
-		return tempTotalWithoutDiscount;
+		return tempTotal;
 	}
-	public static boolean checkProductCode(String productCode) {
-		for(int k=0; k<codeOfProduct.length; k++) {
-			if(codeOfProduct[k].equals(productCode)) {
-				return false;
-			}
-		}
-		return true;
-	}
+	
 }
