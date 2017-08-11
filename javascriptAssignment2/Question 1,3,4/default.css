@@ -1,0 +1,81 @@
+*{
+	margin : 0;
+	padding : 0;
+	font-family : Arial;
+}
+
+a:link,a:active,a:visited{
+	text-decoration: none;
+}
+
+li{
+	list-style: none;
+}
+
+/************* Header *************/
+
+#header nav ul li a{
+	color:white;
+	padding : 15px 10px;
+	display: inline-block;
+	transition: 0.4s;
+}
+
+#header nav ul li a:link{
+	color:teal;
+}
+
+#header{
+	background : black;
+	color : white;
+	padding : 0px 40px;
+}
+
+
+#header nav ul li{
+	display: inline-block;
+}
+
+#header .right nav ul li{
+	display: inline-block;
+}
+
+#header .right nav ul li:hover a{
+	color : white;
+}
+
+/************* Header End *************/
+
+
+
+#cover{
+	background : teal;
+	padding : 150px 0;
+	color : white;
+	font-size:48px;
+	text-align: center;
+	overflow:hidden;
+	height:392px;
+}
+#footer{
+	background:black;
+	color:white;
+	text-align:center;
+}
+button{
+	background:white;
+	color:teal;
+	padding:7px;
+	border-radius:3px;
+	border: 1px solid black;
+}
+input{
+	color:black;
+	border-radius:3px;
+	border: 2px solid white;
+	padding:5px;
+}
+
+p{
+	color:white;
+}
