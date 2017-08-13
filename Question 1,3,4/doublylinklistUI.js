@@ -31,20 +31,6 @@ DoublyLinkedList.prototype.add = function(){
 	}	
 }
 
-
-
-function getPromptData() {
-    var position = prompt("Please enter position", "1").trim();
-    while (!position.match("^[0-9]+$")) {
-        position = prompt("Please enter Correct position", "1").trim();
-    }
-    
-    return position;
-}
-
-
-
-
 DoublyLinkedList.prototype.addAtPosition = function () {
 	var value = document.getElementById("element").value;
     var start = this.head;
@@ -72,32 +58,6 @@ DoublyLinkedList.prototype.addAtPosition = function () {
         this.display();
     }
 }
-
-
-
-
-
-
-function addValueByPosition() {
-    var inputObj = document.getElementById("inputValue");
-    var value = inputObj.value.trim();
-    var flag = checkInput(value);
-    if (flag === true) {
-        var position = getPromptData();
-        displayMessage(obj.addAtPosition(value, position));
-        displayLinkedList();
-    } else {
-        displayMessage("Enter Value");
-    }
-    clearInputField(inputObj);
-}
-
-
-
-
-
-
-
 
 
 DoublyLinkedList.prototype.removeByIndex = function() {
