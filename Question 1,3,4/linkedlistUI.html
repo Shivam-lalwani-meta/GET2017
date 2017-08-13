@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<link href="default.css" rel="stylesheet" />
+		<script type = "text/javascript" src="linkedlistUI.js">
+		</script>
+	</head>
+	<body>
+		<input type="text" id="element" placeholder="Enter Element">
+		<button id="addElement" onclick="list.addElement()">Add Element</button>
+
+		<button onclick="list.removeElementByValue()">Delete Element By Value</button>
+
+		<button onclick="list.removeElementByIndex()">Delete Element By Index</button>
+
+		<button onclick="list.searchElementByValue()">Search Element By Value</button>
+
+		<button onclick="list.searchElementByIndex()">Search Element By Index</button><br><br>
+
+		<button id="display" onclick="list.display()">Display List</button><br>
+		<p id="result"></p>
+	</body>
+</html>
