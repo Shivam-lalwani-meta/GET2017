@@ -86,7 +86,8 @@ public class Main {
 					break;
 				case 3:
 					System.out.println("\nYour Cart");
-					facadeObj.displayCart();
+					String status = facadeObj.displayCart();
+					System.out.print(status+"\n");
 					break;
 				case 4:
 					facadeObj.generateBill();

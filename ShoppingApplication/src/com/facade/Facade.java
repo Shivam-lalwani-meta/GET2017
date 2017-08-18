@@ -125,10 +125,10 @@ public class Facade {
 	/**
 	 * Display cart Objects alongwith its attributes
 	 */
-	public void displayCart() {
+	public String displayCart() {
 		//checking whether the cart is empty or not
 		if(cartObj.isEmpty()) {
-			System.out.println("Cart is Empty");
+			return "Cart is Empty";
 		} else {
 			//printing cart products/objects
 			for (Object product: cartObj.getAllProduct()) {
@@ -136,6 +136,7 @@ public class Facade {
 		    }
 		}	
 		System.out.println("\n");
+		return null;
 	}
 
 	/**
