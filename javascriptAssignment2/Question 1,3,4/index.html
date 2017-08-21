@@ -1,0 +1,50 @@
+<!doctype HTML>
+<html>
+	<head>
+		<title>Demo</title>
+		<link href="default.css" rel="stylesheet" />
+		<link rel="import" href="linkedlistUI.html">
+		<script>
+			function loadSinglyList(){
+				document.getElementById("cover").innerHTML = '<object data="linkedlistUI.html" style="width: 100%; height: 350px; margin: 25px 25%;"></object>';
+			}
+			function loadDoublylyList(){
+				document.getElementById("cover").innerHTML = '<object data="doublelinklistUI.html" style="width: 100%; height: 350px; margin: 25px 25%;"></object>';
+			}
+			function loadStack(){
+				document.getElementById("cover").innerHTML = '<object data="stackUI.html" style="width: 100%; height: 350px; margin: 25px 25%;"></object>';
+			}
+			function loadQueue(){
+				document.getElementById("cover").innerHTML = '<object data="queueUI.html"  style="width: 100%; height: 350px; margin: 25px 25%;"></object>';
+			}
+		</script>
+		<script>
+			$
+		</script>
+	</head>
+	<body>
+
+		<!-- Header Start -->
+		<header id="header">
+				<nav>
+					<ul>
+						<li><a href="#" onclick="loadSinglyList();">Singly Linked List</a></li>
+						<li><a href="#" onclick="loadDoublylyList();">Doubly Linked List</a></li>
+						<li><a href="#" onclick="loadStack();">Stack</a></li>
+						<li><a href="#" onclick="loadQueue();">Queue</a></li>
+					</ul>
+				</nav>
+		</header>
+		<!-- Header End -->
+
+		<section id="cover">
+			Javascript Assignment
+		</section>
+		
+		<!-- footer start -->
+		<footer id="footer">
+			Javascripts Assignment
+		</footer>
+		<!-- footer end -->
+	</body>
+</html>
