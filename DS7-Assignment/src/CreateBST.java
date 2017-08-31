@@ -1,3 +1,5 @@
+import java.util.InputMismatchException;
+
 /**
  * @author Shivam Lalwani
  * @version 1.0
@@ -13,20 +15,10 @@
 public class CreateBST {
 
 	/** The root. */
-	Node root;
+	private Node root;
 
 	/** The indexCounter to assign index numbers to Nodes */
 	private static int indexCounter;
-
-	/** The index to be returned as a result of binary search */
-	int index;
-
-	/**
-	 * Instantiates a new builds the BST.
-	 */
-	public CreateBST() {
-		root = null;
-	}
 
 	/**
 	 * Insert.
@@ -52,12 +44,12 @@ public class CreateBST {
 			return new Node(data, indexCounter);
 		}
 		//if the value is less than root value, insert on left-node
-		if (data < root.data) {
-			root.left = insertInTree(root.left, data);
+		if (data < root.getData()) {
+			root.setLeft(insertInTree(root.getLeft(), data));
 		}
 		//if the value is more than root value, insert on right-node
-		else if (data > root.data) {
-			root.right = insertInTree(root.right, data);
+		else if (data > root.getData()) {
+			root.setRight(insertInTree(root.getRight(), data));
 		}
 		return root;
 	}
@@ -69,8 +61,15 @@ public class CreateBST {
 	 * @return the, the result as index
 	 */
 	public int searchElement(int value) {
+		try{
+			if(String.class.isInstance(value)) {
+				throw new InputMismatchException();
+			}
+		} catch(InputMismatchException e) {
+			e.printStackTrace();
+		}
 		Node node = root;
-		return search(node, value);
+		return search(node, value);	
 	}
 
 	/**
@@ -82,25 +81,33 @@ public class CreateBST {
 	 *            the value
 	 * @return the result as index
 	 */
-	private int search(Node root, int val) {
-		//search till null is not encountered
-		while ((root != null)) {
-			//if value is less than root, make left node as a new root
-			if (val < root.getData()) {
-				root = root.left;
+	private int search(Node root, int value) {
+		
+		try{
+			if(String.class.isInstance(value)) {
+				throw new InputMismatchException();
 			}
-			//if value is more than root, make right node as a new root
-			else if (val > root.getData()) {
-				root = root.right;
+			//search till null is not encountered
+			while ((root != null)) {
+				//if value is less than root, make left node as a new root
+				if (value < root.getData()) {
+					root = root.getLeft();
+				}
+				//if value is more than root, make right node as a new root
+				else if (value > root.getData()) {
+					root = root.getRight();
+				}
+				//if value found return its index
+				else {
+					return root.getIndex();
+				}
+				//recursion point
+				search(root, value);
 			}
-			//if value found return its index
-			else {
-				return root.getIndex();
-			}
-			//recursion point
-			search(root, val);
+			
+		} catch(InputMismatchException e) {
+			e.printStackTrace();
 		}
 		return -1;
 	}
-
 }

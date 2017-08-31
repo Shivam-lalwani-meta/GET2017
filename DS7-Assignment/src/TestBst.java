@@ -11,7 +11,7 @@ import static org.junit.Assert.assertFalse;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class TestBst{
+public class TestBST{
 	static CreateBST bstObj;
 	private int expected;
 	private boolean toCheck;
