@@ -95,7 +95,7 @@ MODIFY Column issue_date TIMESTAMP DEFAULT NOW();
 CREATE TRIGGER Due_Date_Trigger 
 BEFORE INSERT ON Book_issue  
 FOR EACH ROW 
-SET NEW.due_date =  NEW.issue_date + INTERVAL 15 day;
+SET NEW.due_date =  NOW() + INTERVAL 15 day;
 
 
 ALTER TABLE Book_issue 
