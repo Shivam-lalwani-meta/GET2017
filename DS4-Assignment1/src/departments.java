@@ -1,0 +1,4 @@
+
+public enum departments {
+	UNDERGRADUATE,GRADUATE,PROFESSOR,CHAIRMAN
+}
