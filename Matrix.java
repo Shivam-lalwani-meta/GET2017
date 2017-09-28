@@ -1,22 +1,20 @@
-/** 
- * @author Shivam Lalwani
- * @version 1.0
- * @Date 27 July 2017
- * @description The Class Matrix created to perform different functionalities of a Matrix
- */
 
+
+/**
+ * Implements the matrix class and performs various functions on the matrix.
+ * 
+ * @author Shivam
+ */
 public class Matrix {
-	protected int data[][];	//The data which is used to store the matrix
-	private int noRows;	//number of rows
-	private int noCols;	//number of columns
-	
-	//Parameterized constructor
-	public Matrix(int noRows, int noCols) {
-		this.noRows = noRows;
-		this.noCols = noCols;
-		data = new int[noRows][noCols];
+	private int data[][];
+	private int noOfRows;
+	private int noOfColumns;
+
+	public Matrix(int row, int column) {
+		this.noOfRows = row;
+		this.noOfColumns = column;
+		data = new int[row][column];
 	}
-	
 	/**
 	 * Getter method to get value of private variable data.
 	 * @return 2-D integer array
@@ -24,59 +22,74 @@ public class Matrix {
 	public int[][] getData() {
 		return data;
 	}
-	
+
+
 	/**
-	 * @param noRows, row at which the data is to be inserted
-	 * @param noCols, column at which the data is to be inserted
-	 * @param val, data value which has to be inserted
+	 * Adds the value at the provided position of row and column.
+	 * 
+	 * @param row ,total no. of rows in the matrix.
+	 * @param column ,total no. of columns in the matrix.
+	 * @param value ,value to be added at Matrix position [row][column]
 	 */
-	public void addElements(int noRows, int noCols, int val) {
-		data[noRows][noCols] = val;
+	public void addElements(int row, int column, int value) {
+		this.data[row][column] = value;
 	}
 
 	/**
-	 * @return the transposed matrix
+	 * For each value of first matrix at position [row][column] sets value of
+	 * second matrix at position [column][row].
+	 * 
+	 * @return the transposed matrix.
 	 */
 	public Matrix transpose() {
-		Matrix trans = new Matrix(noCols, noRows);
-		for (int row_index = 0; row_index < trans.noRows; row_index++) {
-			for (int col_index = 0; col_index < trans.noCols; col_index++) {
-				trans.data[row_index][col_index] = data[col_index][row_index];
-			}
-		}
-		return trans;
-	}
+		Matrix transposeMatrix = new  Matrix(noOfColumns, noOfRows); 
 
-	//to display matrix on console
-	public void show() {
-		for (int row_index = 0; row_index < noRows; row_index++) {
-			for (int col_index = 0; col_index < noCols; col_index++) {
-				System.out.print(data[row_index][col_index] + " ");
+		for (int rowCount = 0; rowCount < noOfColumns; rowCount++) {
+			for (int columnCount = 0; columnCount < noOfRows; columnCount++) {
+				transposeMatrix.addElements(rowCount, columnCount, data[columnCount][rowCount]);
 			}
-			System.out.println();
 		}
+
+		return transposeMatrix;
+	}
+	//to display matrix
+	public String show() {
+		String display = "";
+		for (int rowIndex = 0; rowIndex < noOfRows; rowIndex++) {
+			for (int columnIndex = 0; columnIndex < noOfColumns; columnIndex++) {
+				display += data[rowIndex][columnIndex] + " ";
+			}
+			display += "\n";
+		}
+
+		return display;
 	}
 
 	/**
-	 * Multiplication.
-	 *
-	 * @return the matrix
+	 * Multiplies first matrix with second matrix. Stores the value of each element by
+	 * multiplying elements of rows of first matrix by elements of columns of second matrix.
+	 * @param matrix1    first matrix to be multiplied.
+	 * @param matrix2    second matrix to be multiplied.
+	 * @return the multiplied matrix.
 	 */
-	public Matrix multiplication(Matrix secondMatrix) {
-		Matrix resultMatrix = new Matrix(noRows, noCols);
-		if(secondMatrix.noRows == noCols){
-			for (int row_index = 0; row_index < noRows; row_index++) {
-				for (int col_index = 0;col_index < noCols; col_index++) {
-					for (int k = 0; k < noCols; k++) {
-						resultMatrix.data[row_index][col_index] = resultMatrix.data[row_index][col_index]
-								+ data[row_index][k] * secondMatrix.data[k][col_index];
+	public Matrix multiplication(Matrix matrix2) {
+		Matrix multipliedMatrix = new Matrix(this.noOfRows, matrix2.noOfColumns);
+
+		if (this.noOfColumns == matrix2.noOfRows) {
+			for (int i = 0; i < this.noOfRows ; i++) {
+				for (int j = 0; j < matrix2.noOfColumns; j++) {
+					int sum = 0;
+					for (int k= 0; k < this.noOfColumns; k++) {
+						sum += this.data[i][k] * matrix2.data[k][j];
 					}
+					multipliedMatrix.addElements(i, j, sum);
 				}
 			}
-		return resultMatrix;
-			}
-		else {
-			return this;
+		} else {
+			return null;
 		}
+		return multipliedMatrix;
 	}
 }
+
+
