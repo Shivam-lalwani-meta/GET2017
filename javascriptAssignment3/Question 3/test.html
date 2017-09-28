@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<script>
+		
+		var d = new Date();
+		alert(d);
+		function startWorker() {
+				myWorker = {};
+				if(typeof(Worker) !== "undefined") {
+					if(typeof(myWorker) == "object") {
+						myWorker = new Worker("test.js");
+					}
+					myWorker.onmessage = function(event) {
+						document.getElementById("result").innerHTML = event.data;
+					}
+				} else {
+					document.getElementById("result").innerHTML = "NOT SUPPORTED";
+				}
+			}
+		function stopWorker() {
+			document.getElementById("result").innerHTML = "Worker Stopped";
+			myWorker.terminate();
+		};
+		
+		function reCheck(){
+			myWorker = {};
+		}
+	</script>
+	</head>
+	<body>
+		<p id="result">Date:</p>
+		<button onclick="startWorker()">Start Worker</button> 
+		<button onclick="stopWorker()">Stop Worker</button>
+		<button onclick="reCheck()">Recheck</button>
+	</body>
+	
+	
+</html>

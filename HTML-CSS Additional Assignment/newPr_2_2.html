@@ -1,0 +1,106 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="work.css">
+<script>
+var val=0;
+var totalruns = 0;
+var out = "out";
+var selector=1;
+var myVar = 0;
+var runstring=0;
+	function starter(value1) {
+		if(value1==0) {
+			var i =0;
+			document.getElementById("up").style.display="inline-block";
+			document.getElementById("down").style.display="none";
+			<!--document.getElementById("fifty").style.display="none";
+			myVar = setInterval(function(){ myCounter(i++) }, 100);
+			runstring=0;
+			
+			function myCounter(val) {
+				if(i<=5) {
+					val = parseInt(val)*2;
+					document.getElementById("result").innerHTML = val;
+						
+				}else{
+					return i=0;
+				}
+			}
+		} else{
+			document.getElementById("result").innerHTML = "Game Over";
+			totalruns=0;
+			clearInterval(myVar);
+			
+		}
+	}	
+	function stopper() {
+		
+		var runs = document.getElementById("result").innerHTML;
+		if(runs==8) {
+			document.getElementById("resultfinal").innerHTML = "No Ball";
+		}else if (runs==0){
+			totalruns+=+runs;
+			starter(1);
+			document.getElementById("resultfinal").innerHTML = runs;
+			document.getElementById("up").style.display="none";
+			document.getElementById("down").style.display="inline-block";
+		}else {
+			totalruns+=+runs;
+			if(runs<8){
+				runstring+=runs;
+				document.getElementById("fifty").style.display = "none";
+			}
+			if(runs==8){
+			document.getElementById("fifty").style.display = "none";
+				runstring+='NB';
+			}
+			if(totalruns>=50&&totalruns<55) {
+				document.getElementById("fifty").style.display = "block";
+			}
+			if(totalruns>=100) {
+				clearInterval(myVar);
+				document.getElementById("fifty").style.display = "none";
+				document.getElementById("result").innerHTML = "You won";
+			}
+			document.getElementById("totalruns").innerHTML = totalruns;
+			document.getElementById("resultfinal").innerHTML = runstring;
+			
+		}
+			
+	}
+	
+	function submit() {
+		var username = document.getElementById("username").value;
+		localStorage.setItem("key1",username);
+		document.getElementById("entername").innerHTML = "Hi " + localStorage.getItem("key1");
+		document.getElementById("username").style.display = "none";
+		document.getElementById("submit").style.display = "none";
+		document.getElementById("result").style.display = "inline-block";
+		document.getElementById("resultfinal").style.display = "block";
+		document.getElementById("totalruns").style.display = "block";
+		document.getElementById("up").style.display = "inline-block";
+		document.getElementById("down").style.display = "inline-block";
+	}
+</script>
+</head>
+<body>
+
+	
+	
+	<div class="box">    
+		<h2 id="entername">Enter your name</h2>
+		<input type="text" name="username" id="username" placeholder="Name"/>
+		<button id="submit" class="button" onclick="submit()">Submit</button>
+		
+		<p id="result" class="counter" style="display:none;">0</p>
+		<h4 id="resultfinal" class="run" style="display:none;">Current Ball</h4>
+		<h2 id="totalruns" class="score" style="display:none;">Total</h2>
+		
+        <button id="down" style="display:none;" class="button" onclick="starter(0)">Starter</button>
+		<button id="up" style="display:none;" class="button" onclick="stopper()">Stop</button>
+		<h2 id="fifty" style="display:none;">Congrats on 50</h2>
+		
+    </div>
+
+</body>
+</html>
