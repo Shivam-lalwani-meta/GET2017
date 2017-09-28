@@ -1,0 +1,115 @@
+.card-title {
+  font-family: 'Acme', sans-serif;
+  font-size: 20px;
+  }
+  
+  .card-outline {
+  outline: none ; 
+  }
+  
+  .create {
+  font-family: 'Acme', sans-serif;
+  font-size: 20px;
+  position: absolute;
+  z-index: 1;
+  margin-left: -200px;
+  padding: 20px 70px;
+  
+  }
+ 
+  .create:hover {
+  
+  }
+  
+  .row button {
+  margin-bottom: 5px;
+  }
+  
+  .options {
+  display: none;
+  }
+  
+  .options button {
+  padding: 2px 5px;
+  } 
+  
+  .prod-info {
+  padding-left: 70px;
+  color:black;
+  }
+  
+  .card-block:hover .options {
+  display: block;
+  }
+
+  .input-group {
+    margin-top: -4%;
+  }
+
+  .content {
+    padding-bottom: 15px;
+  }
+
+
+  .card-title {
+    font-family: 'Acme', sans-serif;
+    font-size: 20px;
+    }
+    
+    .card-outline {
+    outline: none ; 
+    border: 2px solid #0fb8ad;
+    padding: 10px;
+    margin-left: 6%;
+    margin-bottom: 25px;
+    transition: transform 0.5s;
+    }
+    
+    .card-outline:hover {
+      transform: scale(1.1,1.1);      
+    }
+
+    .card-block:hover {
+    
+    cursor: pointer;
+    color: #B98800;
+    }
+    
+    .create {
+    font-family: 'Acme', sans-serif;
+    font-size: 20px;
+    position: absolute;
+    z-index: 1;
+    margin-left: -200px;
+    padding: 20px 70px;
+    
+    }
+    /* 
+    .card-block h4, .card-block p, .card-block span {
+    padding: 10px;
+    } */
+    
+    .create:hover {
+    transform: translateX(175px);
+    }
+    
+    .row button {
+    margin-bottom: 5px;
+    }
+    
+    .options {
+    display: none;
+    }
+    
+    .options button {
+    padding: 2px 5px;
+    } 
+    
+    .prod-info {
+    padding-left: 70px;
+    }
+    
+    .card-block:hover .options {
+    display: block;
+    }
+  
