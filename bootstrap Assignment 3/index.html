@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Bootstrap Example</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link href="styles.css" rel="stylesheet" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	</head>
+	<body>
+		
+		<div id="overlay">
+			<div id="red" class="col-md-12 col-sm-12 col-xs-12 "><i class="fa fa-circle" aria-hidden="true"></i></div>
+			<div id="blue" class="col-md-4 col-sm-4 col-xs-4 "><i class="fa fa-circle" aria-hidden="true"></i></div>
+			<div id="green" class="col-md-4 col-sm-4 col-xs-4 "><i class="fa fa-circle" aria-hidden="true"></i></div>
+			<div id="purple" class="col-md-4 col-sm-4 col-xs-4 "><i class="fa fa-circle" aria-hidden="true"></i></div>
+			<div id="click">Click Anywhere To Continue</div>
+		</div>
+		
+		<header id="header" class="container-fluid">
+			<div class="row">
+				<div class="upper_header container">
+					<div class="col-md-6 col-sm-6 col-xs-6 upper_section1">LOGO</div>
+					<div id="logo" class="col-md-6 col-sm-6 col-xs-6 upper_section2"><i class="fa fa-user-circle-o" aria-hidden="true"></i></div>
+					<div id="logoinfo" class="col-md-6 col-sm-6 col-xs-6 upper_section2" style="display:none;"><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></div>
+				</div>
+			</div>	
+		</header>
+		<section>
+			
+			<nav class="navbar navbar-inverse auto">
+				<div class="container-fluid">
+					<div class="container">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed adjust" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div>
+							<div class="collapse navbar-collapse"  id="bs-example-navbar-collapse-1">
+								<ul id="menu" class="nav navbar-nav navbar-right">
+									<li id="dashboard"><a href="#">DASHBOARD</a></li>
+									<li><a href="#">UI ELEMENTS</a></li>
+									<li><a href="#">DATA TABLES</a></li>
+									<li><a href="#">FORMS</a></li>
+									<li><a href="#">LOGIN PAGE</a></li>
+									<li><a href="#">BLANK PAGE</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</section>
+		<section>
+			<div id="container1" class="container">
+				DashBoard
+				<hr>
+				<div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12 alert alert-success box1"><strong>HELLO</strong>, to first program of bootstrap
+				and welcome to bootstrap programming. This page is made under the requirment of assignment and has to be made within 2-3 days.</div>
+				<div class="row">
+					<div class = "colored_boxes">
+						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 ">
+							<div id="notification" class= "well colored_box1 text-center" data-toggle="modal" data-target="#myModal">
+								<i class="fa fa-bell icon"></i>
+								<hr>
+								Notifications	
+							</div>
+						</div>
+						<div id="favourites" class="col-lg-3 col-md-3 col-sm-3 col-xs-12 ">
+							<div class = "well colored_box2 text-center">
+								<i class="fa fa-camera icon"></i>
+								<hr>
+								Photogallery	
+							</div>
+						</div>
+						<div id="announcements" class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+							<div class = " well colored_box3 text-center">
+								<i class="fa fa-heart icon"></i>
+								<hr>
+								Favourites	
+							</div>
+						</div>
+						<div id="photogallery"class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+							<div class = " well colored_box4 text-center">
+								<i class="fa fa-volume-up icon"></i>
+								<hr>
+								Announcements	
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+			
+			<div id="hidden_menu" class=" container" style="display:none;" role="alert"> 
+				<div class= "hidden_menu">
+					<div class="panel panel-primary">
+						<div class="panel-heading">Panel with panel-primary class</div>
+						<div class="panel-body">Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</div>
+					</div>
+				</div>	
+			</div>
+			
+			<div id="container2" class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<div class="panel panel-default left-panel">
+							<div class="panel-heading">
+								Active  Notice Panel 
+								<div class="pull-right">
+									<div class="dropdown">
+										<button class="btn btn-success btn-xs" type="button" data-toggle="dropdown">
+											<span class="glyphicon glyphicon-cog"></span>
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu">
+											<li><a href="#">Option 1</a></li>
+											<li><a href="#">Option 2</a></li>
+											<li><a href="#">Option 3</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							
+							<div class="panel-body">
+								<ul>
+									<li>
+										<a href="#">
+											<span class="glyphicon glyphicon-align-left text-success"></span> 
+											Lorem ipsum dolor sit amet ipsum dolor sit amet sit amet
+											<span class="label label-warning"> Just now </span>
+										</a>
+									</li>
+									<hr>
+									<li>
+										<a href="#">
+											<span class="glyphicon glyphicon-info-sign text-danger"></span>  
+											Lorem ipsum dolor sit amet ipsum dolor sit amet sit amet
+											<span class="label label-info"> 2 min chat </span>
+										</a>
+									</li>
+									<hr>
+									<li>
+										<a href="#">
+											<span class="glyphicon glyphicon-comment text-warning"></span>  
+											Lorem ipsum dolor sit amet ipsum dolor sit amet sit amet
+											<span class="label label-success"> GO ! </span>
+										</a>
+									</li>
+									<hr>
+									<li>
+										<a href="#">
+											<span class="glyphicon glyphicon-edit text-danger"></span>  
+											Lorem ipsum dolor sit amet ipsum dolor sit amet sit amet
+											<span class="label label-success"> Let's have it </span>
+										</a>
+									</li>
+									<hr>
+								</ul>
+							</div>
+							<div class="panel-footer">
+								<a href="#" class="btn btn-default btn-block">
+									<i class="glyphicon glyphicon-repeat"></i> Just A Small Footer Button
+								</a>
+							</div>
+						</div>
+						<hr>
+						<div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12 alert alert-warning text-center social-buttons">
+							<button type="button" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</button>
+							<button type="button" class="btn btn-gplus"><i class="fa fa-google-plus"></i> Google +</button>
+							<button type="button" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</button>
+							<button type="button" class="btn btn-li"><i class="fa fa-linkedin"></i> Linkedin</button>
+						</div>
+						<hr>
+						<div class="table-responsive" style="overflow-x: inherit;">
+							<table class="table table-striped table-bordered text-center">
+								<thead>
+									<tr>
+										<th class="text-center">Ref. No.</th>
+										<th class="text-center">Date</th>
+										<th class="text-center">Amount</th>
+										<th class="text-center">Status</th>
+										<th class="text-center">Delivery On</th>
+										
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>01/02/1995</td>
+										<td><button type="button" class="btn btn-success">Success</button></td>
+										<td>@mdo</td>
+										<td>01/02/1995</td>
+										
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>01/02/1995</td>
+										<td><button type="button" class="btn btn-info">Information</button></td>
+										<td>@fat</td>
+										<td>01/02/1995</td>
+										
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>01/02/1995</td>
+										<td><button type="button" class="btn btn-warning">Warning</button></td>
+										<td>@twitter</td>
+										<td>01/02/1995</td>
+										
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>	
+					
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 right-pannel">
+						<div class="alert_panel">
+							<div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12 alert alert-danger text-center">
+								<strong>HELLO</strong>, to first program of bootstrap
+							and welcome to bootstrap programming. This page is made under the requirment of assignment and has to be made within 2-3 days.</div>
+						</div>
+						<hr>
+						<div class="form_panel">
+							<div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12 alert alert-success">
+							Compose New Message</div>
+							<div>
+								<form id="form">
+									<div class="form-group">
+										<label for="name">Enter Recepient Name:</label>
+										<input type="text" class="form-control" id="name">
+									</div>
+									<div class="form-group">
+										<label for="subject">Enter Subject:</label>
+										<input type="text" class="form-control" id="subject">
+									</div>
+									<div class="form-group">
+										<label for="comment">Message:</label>
+										<textarea class="form-control" rows="11" id="comment"></textarea>
+									</div>
+									<button type="submit" class="btn btn-warning non-cornered-btn"><span class="glyphicon glyphicon-print"></span>Send Message</button>
+									<button type="submit" class="btn btn-success non-cornered-btn"><span class="glyphicon glyphicon-tags"> SaveToDrafts</span></button>
+								</form>
+							</div> 
+							<div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12 well">
+							<strong>Note:</strong> New Message</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+			
+			
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" role="dialog">
+				<div class="modal-dialog">
+					
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header header_color">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Notification</h4>
+						</div>
+						<div class="modal-body">
+							<div id="myCarousel" class="carousel slide" data-ride="carousel" 
+							data-interval="false">
+								<!-- Indicators -->
+								<ol class="carousel-indicators">
+									<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+									<li data-target="#myCarousel" data-slide-to="1"></li>
+									<li data-target="#myCarousel" data-slide-to="2"></li>
+								</ol>
+								
+								<!-- Wrapper for slides -->
+								<div class="carousel-inner">
+									<div class="item active">
+										<ul>
+											<li>
+												<span class="glyphicon glyphicon-align-left text-success border"></span> 
+												Lorem ipsum dolor sit amet ipsum dolor sit amet
+												<span class="label label-warning hidden-xs"><a href="#" class="color-tooltip" data-toggle="tooltip" data-placement="right" title="Just Now!">Just now</a></span>
+												<div class="hidden-label"><span class="label label-warning visible-xs"><a href="#" class="color-tooltip" data-toggle="tooltip" data-placement="top" title="Just Now!">Just now</a></span></div>
+											</li>
+											<hr>
+											<li>
+												<span class="glyphicon glyphicon-info-sign text-danger border"></span>  
+												Lorem ipsum dolor sit amet ipsum dolor sit amet
+												<span class="label label-info hidden-xs"><a href="#" class="color-tooltip" data-toggle="tooltip" data-placement="right" title="2 min chat">2 min chat</a></span>
+												<div class="hidden-label"><span class="label label-info visible-xs"><a href="#" class="color-tooltip" data-toggle="tooltip" data-placement="top" title="2 min chat">2 min chat</a></span></div>
+											</li>
+											<hr>
+											<li>
+												<span class="glyphicon glyphicon-comment text-warning border"></span>  
+												Lorem ipsum dolor sit amet ipsum dolor sit amet
+												<span class="label label-success hidden-xs"><a href="#" class="color-tooltip" data-toggle="tooltip" data-placement="right" title="Go!">Go!</a></span>
+												<div class="hidden-label"><span class="label label-success visible-xs"><a href="#" class="color-tooltip" data-toggle="tooltip" data-placement="top" title="Go!">Go!</a></span></div>
+											</li>
+											<hr>
+											<li>
+												<span class="glyphicon glyphicon-edit text-danger border"></span>  
+												Lorem ipsum dolor sit amet ipsum dolor sit amet
+												<span class="label label-success hidden-xs"><a href="#" class="color-tooltip" data-toggle="tooltip" data-placement="right" title="Let's have it">Let's have it</a></span>
+												<div class="hidden-label"><span class="label label-success visible-xs"><a href="#" class="color-tooltip" data-toggle="tooltip" data-placement="top" title="Let's have it">Let's have it</a></span></div>
+											</li>
+											<hr>
+										</ul>
+										
+										
+										
+									</div>
+									
+									<div class="item">
+										<div id="acordin" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+											<div class="panel-group" id="accordion">
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															Collapsible Group 1
+															<a class="pull-right glyphicon glyphicon-minus" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+															</a>
+														</h4>
+													</div>
+													<div id="collapse1" class="panel-collapse collapse in">
+														<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+															sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+															minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+															commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+															sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+															minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+														commodo consequat.</div>
+													</div>
+												</div>
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															Collapsible Group 2
+															<a class="pull-right glyphicon glyphicon-plus" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+															</a>
+														</h4>
+													</div>
+													<div id="collapse2" class="panel-collapse collapse">
+														<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+															sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+															minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+															commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+															sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+															minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+														commodo consequat.</div>
+													</div>
+												</div>
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															Collapsible Group 3
+															<a class="pull-right glyphicon glyphicon-plus" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+															</a>
+														</h4>
+													</div>
+													<div id="collapse3" class="panel-collapse collapse">
+														<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+															sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+															minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+															commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+															sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+															minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+														commodo consequat.</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<div class="item">
+										<ul id="black" class="nav nav-tabs">
+											<li class="active"><a href="#tab1" data-toggle="tab" class="panel-tab">Tab1</a></li>
+											<li><a href="#tab2" data-toggle="tab" class="panel-tab">Tab2</a></li>
+											<li><a href="#tab3" data-toggle="tab" class="panel-tab">Tab3</a></li>
+											<li><a href="#tab4" data-toggle="tab" class="panel-tab">Tab4</a></li>
+										</ul>
+										<div class="tab-content">
+											<div class="tab-pane in active" id="tab1">
+												Raw denim you probably haven’t heard of them jean shorts Austin.
+												Nesciunt tofu stumptown aliqua, retro synth master cleanse.
+												Mustache cliche tempor, williamsburg carles vegan helvetica.
+												Reprehenderit butcher retro keffiyeh dreamcatcher synth.
+												Cosby sweater eu banh mi, qui irure terry richardson ex squid. 
+											</div>
+											<div class="tab-pane" id="tab2">
+												Raw denim you probably haven’t heard of them jean shorts Austin.
+												Nesciunt tofu stumptown aliqua, retro synth master cleanse.
+												Mustache cliche tempor, williamsburg carles vegan helvetica.
+												Reprehenderit butcher retro keffiyeh dreamcatcher synth.
+												Cosby sweater eu banh mi, qui irure terry richardson ex squid. 
+											</div>
+											<div class="tab-pane" id="tab3">
+												Raw denim you probably haven’t heard of them jean shorts Austin.
+												Nesciunt tofu stumptown aliqua, retro synth master cleanse.
+												Mustache cliche tempor, williamsburg carles vegan helvetica.
+												Reprehenderit butcher retro keffiyeh dreamcatcher synth.
+												Cosby sweater eu banh mi, qui irure terry richardson ex squid. 
+											</div>
+											<div class="tab-pane" id="tab4">
+												Raw denim you probably haven’t heard of them jean shorts Austin.
+												Nesciunt tofu stumptown aliqua, retro synth master cleanse.
+												Mustache cliche tempor, williamsburg carles vegan helvetica.
+												Reprehenderit butcher retro keffiyeh dreamcatcher synth.
+												Cosby sweater eu banh mi, qui irure terry richardson ex squid. 
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<!-- Left and right controls -->
+								<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+									<span class="glyphicon glyphicon-chevron-left"></span>
+									<span class="sr-only">Previous</span>
+								</a>
+								<a class="right carousel-control" href="#myCarousel" data-slide="next">
+									<span class="glyphicon glyphicon-chevron-right"></span>
+									<span class="sr-only">Next</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>	
+	</section>
+	<footer id="footer" class="container-fluid">
+		<div class="footer_data container">
+			@2017 All Rights reserved.
+		</div>	
+	</footer>
+	<script>
+		$(document).ready(function(){
+			$("#dashboard").css('background-color','#c36464').siblings().css('background-color', '#222');
+			$("#overlay").click(function(){
+				document.getElementById("overlay").style.display = "none";
+			});
+			$("#menu li").click(function(){
+				$(this).css('background-color','#c36464').siblings().css('background-color', '#222');
+			});
+			
+			$("#logo").click(function(){
+				$("#logoinfo").fadeToggle("slow");
+			});
+			$("#logoinfo").click(function(){
+				alert("You are logged in !!");
+			});
+			$("#notification").click(function(){
+				$("#hidden_menu").slideDown("slow");
+			});
+			$("#notification").mouseout(function(){
+				$("#hidden_menu").slideUp("slow");
+			});
+			$("#favourites").click(function(){
+				$("#hidden_menu").slideDown("slow");
+			});
+			$("#favourites").mouseout(function(){
+				$("#hidden_menu").slideUp("slow");
+			});
+			$("#announcements").click(function(){
+				$("#hidden_menu").slideDown("slow");
+			});
+			$("#announcements").mouseout(function(){
+				$("#hidden_menu").slideUp("slow");
+			});
+			$("#photogallery").click(function(){
+				$("#hidden_menu").slideDown("slow");
+			});
+			$("#photogallery").mouseout(function(){
+				$("#hidden_menu").slideUp("slow");
+			});	
+			$(document).ready(function(){
+				$("a").tooltip();
+			});
+			
+			$('.collapse').on('shown.bs.collapse', function(){
+				$(this).parent().find(".glyphicon-plus").removeClass("glyphicon-plus").addClass("glyphicon-minus");
+				}).on('hidden.bs.collapse', function(){
+				$(this).parent().find(".glyphicon-minus").removeClass("glyphicon-minus").addClass("glyphicon-plus");
+			});
+		});
+	</script>
+</body>
+
+</html>

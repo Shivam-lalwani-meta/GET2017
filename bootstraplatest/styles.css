@@ -1,0 +1,358 @@
+/* #header {
+	background:black;
+}*/
+/************* Header Start *************/
+#logo i{
+	cursor:pointer;
+	transition:transform 1s;
+}
+#logo i:hover {
+	transform: rotate(360deg);
+}
+
+.colored_box1, .colored_box2, .colored_box3, .colored_box4{
+	transition:transform 1s;
+}
+.colored_box1:hover, .colored_box2:hover, .colored_box3:hover, .colored_box4:hover {
+	transform: translate(0px,-10px);
+}
+
+#logoinfo a {
+	color:white;
+	font-size:14px;
+	text-decoration:none;
+}
+.activetab {
+	background-color:#c36464;
+	color:white;
+}
+
+#header {
+	background:#c36464;
+}
+
+#header .upper_header {
+	height:100px;
+}
+
+#header .upper_header .upper_section1{
+	color:white;
+	font-size:28px;
+	margin-top : 30px;
+}
+#header .upper_header .upper_section2 {
+	color:white;
+	font-size:30px;
+	text-align:right;
+}
+
+#header .lower_header {
+	height:30px;
+	background:#3d3d3d;
+}
+
+#header .lower_header .tab{
+	text-align:center;
+	height:100%;
+	padding:4px 0px 0px 2px;
+	background:#3d3d3d;
+}
+
+#header .lower_header .tab:hover { 
+	cursor:pointer;
+	//background-color:grey;
+}
+
+.tab a:hover{
+	
+}
+
+#header .lower_header .tab a{
+	text-decoration:none;
+	color:white;
+}
+
+/************* Header End *************/
+
+
+/************* Container Start *************/
+#container1 {
+	color:#c36464;
+	font-size:30px;
+	margin-top:2%;
+}
+
+#container1 .box1{
+	font-size:14px;
+}
+
+#container1 .colored_boxes{
+	color:white;
+	font-size:18px;
+}
+
+#container1 .colored_boxes i{
+	font-size:35px;
+}
+
+#container1 .colored_boxes hr{
+	width:100%;
+	align:center;
+}
+
+#container1 .colored_boxes hr{
+	height: 0px;
+	background-color:white;
+}
+
+#container1 .colored_box1:hover {
+	cursor:pointer;
+}
+
+#container1 .colored_box2:hover {
+	cursor:pointer;
+}
+
+#container1 .colored_box3:hover {
+	cursor:pointer;
+}
+
+#container1 .colored_box4:hover {
+	cursor:pointer;
+}
+
+#container1 .colored_box1{
+	background-color:#b9b739;
+}
+
+#container1 .colored_box2{
+	background-color:#f94d4d;
+}
+
+#container1 .colored_box3{
+	background-color:#119c7e;
+}
+
+#container1 .colored_box4{
+	background-color:#b739b9;
+}
+
+#container1 hr {
+	height: 2px;
+	background:#c36464;
+}
+/************* Container End *************/
+
+#container2 {
+	margin-top:1.5%;
+}
+
+#container2 .left_panel{
+	border: 2px solid #ccc;
+	padding: 5px;	
+}
+
+#container2 .right_panel{
+	background: #f94d4d;
+}
+
+.form_panel{
+	margin-top:94px;
+	border: 1px solid #dff0d8;
+	border-radius:5px;
+}
+
+#form {
+	padding:20px;
+}
+
+#footer {
+	background-color:#c36464;
+	color: white;
+	margin-top:1%;
+	color:white;
+	padding:17px;
+}
+
+.icon {
+	font-size: 30px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	padding: 10px;
+}
+.inside_active_panel {
+	background-color:white;
+}
+
+.form_right {
+	border : 1px lighter grey;
+}
+
+.hidden_menu{
+	font-size:14px;
+	margin-top:2%;
+	padding:15px;
+}
+.btn-fb {
+    background-color: #3B5998;
+}
+
+.btn-gplus {
+    background-color: #DD4B39;
+}
+
+.btn-tw {
+    background-color: #55ACEE;
+}
+
+.btn-li {
+    background-color: #0082CA;
+}
+
+.social-buttons {
+	padding: 14px;
+	background-color: #fcf8e3;
+}
+
+.social-buttons button {
+	border-radius: 0px;
+	color: #fff;
+}
+
+.panel-body ul {
+	padding-left: 0px;
+	list-style: none;
+}
+
+.left-panel .panel-body .glyphicon {
+	border: 2px solid #ccc;
+	padding: 5px;
+}
+
+.panel .panel-body ul li a {
+	text-decoration: none;
+	color: #000;
+}
+
+.panel .panel-body ul li a .label {
+	padding: 5px;
+}
+
+section .navbar .container li a {
+	color:white;
+}
+.non-cornered-btn {
+	border-radius:0px;
+}
+.adjust {
+	margin-top: -42px;
+}
+.auto {
+	min-height:auto;
+}
+
+@media screen and (max-width: 768px) {
+    .upper_section2 {
+		display:none;
+	}     
+}
+
+#overlay {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#red{
+    margin-left: 45%;
+    margin-top: 28%;
+    font-size: 20px;
+    color: #c36464;
+	animation-name : red;
+	animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes red {
+    0%   {left:0px; top:-2px;}
+    25%  {left:0px; top:-12px;}
+    50%  {left:0px; top:-22px;}
+    75%  {left:0px; top:-32px;}
+    100% {left:0px; top:-42px;}
+}
+
+
+#blue{
+    margin-left: 46.5%;
+	margin-top: -36px;
+    font-size: 20px;
+    color: blue;
+	animation-name : blue;
+	animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-delay: 0.2s;
+    animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes blue {
+    0%   {left:0px; top:-2px;}
+    25%  {left:0px; top:-12px;}
+    50%  {left:0px; top:-22px;}
+    75%  {left:0px; top:-32px;}
+    100% {left:0px; top:-42px;}
+}
+
+#green{
+    margin-left: 48%;
+	margin-top: -36px;
+    font-size: 20px;
+    color: green;
+	animation-name : red;
+	animation-duration: 0.4s;
+    animation-timing-function: linear;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes green {
+    0%   {left:0px; top:-2px;}
+    25%  {left:0px; top:-12px;}
+    50%  {left:0px; top:-22px;}
+    75%  {left:0px; top:-32px;}
+    100% {left:0px; top:-42px;}
+}
+
+#purple{
+    margin-left: 49.5%;
+	margin-top: -36px;
+    font-size: 20px;
+    color: purple;
+	animation-name : purple;
+	animation-duration: 0.4s;
+    animation-timing-function: linear;
+    animation-delay: 0.7s;
+    animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+#click {
+	margin-top: 34%;
+    margin-left: 40%;
+	font-size: 20px;
+    color: #bca6a6;
+}
+@keyframes purple {
+    0%   {left:0px; top:-2px;}
+    25%  {left:0px; top:-12px;}
+    50%  {left:0px; top:-22px;}
+    75%  {left:0px; top:-32px;}
+    100% {left:0px; top:-42px;}
+}

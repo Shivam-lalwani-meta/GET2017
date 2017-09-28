@@ -1,0 +1,94 @@
+body {
+    font-family: helvetica, arial, verdana, sans-serif;
+	width:100%;
+	height:100%;
+	
+}
+
+input {
+	font-size: 2.4em;
+	background-color: transparent;
+	text-align: center;
+	border-width: 0;
+	width: 100%;
+	margin: 0 0 .1em 0;
+	color: #fff;
+}
+
+label {
+	display: block;
+	font-size: .8em;
+}
+
+.button{
+	margin-top: 3px;
+    background: white;
+    width: 18%;
+    display: block;
+    padding: 10px 0px;
+    border: 2px solid white;
+    border-radius: 4px;
+    color: #1fc8db;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 3em;
+    text-align: center;
+	display:inline;
+}
+.button:hover{
+	margin-top: 3px;
+    background: #1fc8db;
+    width: 18%;
+    display: block;
+    padding: 10px 0px;
+    
+    border-radius: 12px;
+	cursor:pointer;
+	transition:2s;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 3em;
+    text-align: center;
+	display:inline;
+}
+p{
+	 height: 50;
+    font-size: 110px;
+
+}
+
+
+.box {
+	top:25;
+	//opacity:0.3;
+	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+	color: white;
+    text-align: center;
+	padding-top:200px;
+	
+	/* rounded corners */
+    -webkit-border-radius: 12px;
+    border-radius: 12px; 
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+        padding: 5% 5% 14% 5%;
+    width: 45%;
+	
+	padding: 3% 5% 14% 5%;
+	    margin-left: 19%;
+    margin-top: 3%;
+  	-webkit-box-shadow: 0px 0px 12px 0px #000;
+    box-shadow: 0px 0px 12px 0px #000;
+  
+}
+#result{
+	color:white;
+	opacity:1;
+}
+.run{
+	
+	
+}
+.score{
+	
+}

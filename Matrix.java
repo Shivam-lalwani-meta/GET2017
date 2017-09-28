@@ -1,4 +1,5 @@
 
+
 /**
  * Implements the matrix class and performs various functions on the matrix.
  * 
@@ -14,7 +15,6 @@ public class Matrix {
 		this.noOfColumns = column;
 		data = new int[row][column];
 	}
-
 	/**
 	 * Getter method to get value of private variable data.
 	 * @return 2-D integer array
@@ -22,6 +22,7 @@ public class Matrix {
 	public int[][] getData() {
 		return data;
 	}
+
 
 	/**
 	 * Adds the value at the provided position of row and column.
@@ -90,4 +91,5 @@ public class Matrix {
 		return multipliedMatrix;
 	}
 }
+
 
