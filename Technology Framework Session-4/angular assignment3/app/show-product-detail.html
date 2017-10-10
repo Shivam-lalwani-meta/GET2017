@@ -1,0 +1,29 @@
+<div class="container">
+    <br>
+    <div class="col-md-6 col-xs-12">
+        <form id="contact-form" role="form">
+            <div class="form-group well">
+                <div *ngIf="prod">
+                    <h2>{{prod.title}} details!</h2>
+                    <div>
+                        <label>price: {{prod.price}} </label>
+                    </div>
+                    <div>
+                        <label>title: {{prod.title}}</label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+
+            </div>
+
+            <button class="btn btn-danger" (click)="goBack()">
+  Back
+</button>
+
+        </form>
+    </div>
+
+</div>
