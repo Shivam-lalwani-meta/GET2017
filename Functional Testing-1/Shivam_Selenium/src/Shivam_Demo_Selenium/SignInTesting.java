@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 /**
  * Test class to perform automatic testing in Firefox
  * 
- * @author Prateek Jain
+ * @author Shivam
  *
  */
 public class SignInTesting {
