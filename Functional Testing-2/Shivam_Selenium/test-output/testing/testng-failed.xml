@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [testing]">
+  <test name="demo test(failed)">
+    <classes>
+      <class name="Shivam_Demo_Selenium.SignInTesting">
+        <methods>
+          <include name="tearDown"/>
+          <include name="signinTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Shivam_Demo_Selenium.SignInTesting -->
+    </classes>
+  </test> <!-- demo test(failed) -->
+</suite> <!-- Failed suite [testing] -->
