@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Shivam_Selenium</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/Shivam_Demo_Selenium/SearchQueryTesting.java</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Downloads/TestAutomation-Assignment1/src/com/metacube/testSearchQuery/SearchQueryTesting.java</locationURI>
+		</link>
+		<link>
+			<name>src/Shivam_Demo_Selenium/SignInTesting.java</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Downloads/TestAutomation-Assignment1/src/com/metacube/testNg/SignInTesting.java</locationURI>
+		</link>
+	</linkedResources>
+</projectDescription>

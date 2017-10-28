@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="29812" started-at="2017-10-11T12:41:38Z" finished-at="2017-10-11T12:42:07Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="29812" started-at="2017-10-11T12:41:38Z" finished-at="2017-10-11T12:42:07Z">
+      <class name="Shivam_Demo_Selenium.NewTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Shivam_Demo_Selenium.NewTest@6d78f375]" name="setUp" is-config="true" duration-ms="5433" started-at="2017-10-11T18:11:38Z" finished-at="2017-10-11T18:11:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="test2()[pri:0, instance:Shivam_Demo_Selenium.NewTest@6d78f375]" name="test2" duration-ms="14664" started-at="2017-10-11T18:11:43Z" finished-at="2017-10-11T18:11:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method status="PASS" signature="test1()[pri:1, instance:Shivam_Demo_Selenium.NewTest@6d78f375]" name="test1" duration-ms="5016" started-at="2017-10-11T18:11:58Z" finished-at="2017-10-11T18:12:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Shivam_Demo_Selenium.NewTest@6d78f375]" name="tearDown" is-config="true" duration-ms="4676" started-at="2017-10-11T18:12:03Z" finished-at="2017-10-11T18:12:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Shivam_Demo_Selenium.NewTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

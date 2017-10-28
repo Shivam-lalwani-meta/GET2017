@@ -1,0 +1,9 @@
+<suite name = "testing">
+	<test name = "demo test">
+		<classes>
+			<class name = "Shivam_Demo_Selenium.SearchQueryTesting"/>
+			<class name = "Shivam_Demo_Selenium.SignInTesting"/>
+			
+		</classes>
+	</test>
+</suite>
